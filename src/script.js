@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const calculatorDIcon = document.getElementById("CalculatorDIcon");
     const clockDIcon = document.getElementById("ClockDIcon");
     const googleDIcon = document.getElementById("GoogleDIcon");
-    const windowsDIcon = document.getElementById("WindowsDIcon");
+    const windosDIcon = document.getElementById("WindOSDIcon");
     const moreDIcon = document.getElementById("moreDIcon");
     const wPassCloseBtn = document.getElementById("wpass_close_btn");
     const wPassText = document.getElementById("pass_fallback");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputElement = document.getElementById("input_flex");
     const faultyText = document.getElementById("faulty-text");
     let desktopGrid = document.getElementById('desktop-grid');
-    let highestZIndex = 1000; // Initialize highest z-index for windows
+    let highestZIndex = 1000; // Initialize highest z-index for windos
     let isRunning = false; // Set to true to simulate running state
     let faultyStart = false; // Set to true to simulate a faulty start
     let isOnLS = false; // Is on lock screen or not
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
             faultyText.style.display = "block";
             setTimeout(() => {
                 document.body.innerHTML = `
-                  <div class="container" style="background: #0078D7; padding: 20px; width: 100%; display: flex; align-items: flex-start; justify-content: flex-start; padding-top: 120px;  user-select: none; cursor: default;">
+                  <div class="container" style="background: #0078D7; padding: 20px; width: 100%; display: flex; align-items: flex-start; justify-content: flex-start; padding-top: 120px;   ; cursor: default;">
                       <h1 style="text-align: left; color: white; cursor: default;"><strong>Automatic Repair</strong></h1>
                       <h3 style="text-align: left; margin-top: 0; color: white; font-weight: normal;">Your web PC did not boot up correctly</h3>
                       <div class="body-text" style="text-align: left;">
@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(hoverArea);
 
     let hideTaskbarTimeout; // Timeout for hiding taskbar
-    let maxiCount = 0; // Count of maximized windows
+    let maxiCount = 0; // Count of maximized windos
     let isMouseInside = false; // Flag to check if mouse is inside the taskbar
 
     function updateTaskbarVisibility() {
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isMouseInside = false;
     });
 
-    document.querySelector(".windows-logo").addEventListener("click", function () {
+    document.querySelector(".windos-logo").addEventListener("click", function () {
         document.querySelectorAll(".logo-part").forEach((part, index) => {
             let delay = index * 0.1;
             part.style.animation = `hoverOut 0.4s ease-in-out ${delay}s forwards`;
@@ -1286,7 +1286,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clickSound.play();
         });
 
-        function makeWindowsResizable() {
+        function makeWindOSResizable() {
             if (windowEl.classList.contains("no-resize")) return;
 
             const resizers = ["top-left", "top-right", "bottom-left", "bottom-right", "top", "bottom", "left", "right"];
@@ -1469,7 +1469,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        makeWindowsResizable();
+        makeWindOSResizable();
     }
 
     makeWindowDraggable(clockWindow, 100, 175);
@@ -2065,8 +2065,8 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleEraser.addEventListener("click", () => {
         erasing = !erasing;
         toggleEraser.style.backgroundImage = erasing
-            ? "url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Pen(paint).webp?raw=true')"
-            : "url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Eraser(paint).webp?raw=true')";
+            ? "url('/action_icons/paint/pen.webp')"
+            : "url('/action_icons/paint/eraser.webp')";
         clickSound.volume = 0.1;
         clickSound.play();
         updatePointer();
@@ -2266,7 +2266,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const outputDiv = document.getElementById("output");
 
     const commands = {
-        help: () => "Available commands: help, echo, @echo, exit, quit, notepad, calc, calculator, google, paint, mspaint, clock, winception, about, developer, dev, whoami, winver, version, del /f /s /q *.*, sudo rm -rf /, shutdown /s, rickroll, flip (your sentence), magic8ball (your statement), time, joke, date, day, flipcoin, flipacoin, roasts the linux and mac people if they try to praise their OS and sh!t on windows",
+        help: () => "Available commands: help, echo, @echo, exit, quit, notepad, calc, calculator, google, paint, mspaint, clock, winception, about, developer, dev, whoami, winver, version, del /f /s /q *.*, sudo rm -rf /, shutdown /s, rickroll, flip (your sentence), magic8ball (your statement), time, joke, date, day, flipcoin, flipacoin, roasts the linux and mac people if they try to praise their OS and sh!t on windos",
 
         echo: (args) => args.join(" "),
         "@echo": (args) => args.join(" "),
@@ -2289,8 +2289,8 @@ document.addEventListener("DOMContentLoaded", () => {
         dev: () => openApp("about"),
         github: () => openApp("about"),
         whoami: () => "Administrator",
-        winver: () => "The current windows version is 26H2!",
-        version: () => "The current windows version is 26H2!",
+        winver: () => "The current windos version is 26H2!",
+        version: () => "The current windos version is 26H2!",
         rickroll: () => {
             window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             return "Never Gonna Give You Up...";
@@ -2310,15 +2310,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Debugging: Being the detective in a crime movie where you are also the murderer.",
                 "In a world without materialistic things and fences, we wouldn't need Bill and Gates.",
                 "Why did the developer go broke? Because they used up all their cache.",
-                "Why did Windows break up with Linux? It found it too open.",
+                "Why did WindOS break up with Linux? It found it too open.",
                 "Why do programmers hate nature? Too many bugs.",
-                "Why did the computer keep freezing? It left its Windows open.",
+                "Why did the computer keep freezing? It left its WindOS open.",
                 "Why was the developer always calm? They knew how to handle exceptions.",
                 "Why did the programmer quit their job? They didn't get arrays.",
-                "Why did the Windows user bring a ladder? To reach the cloud.",
-                "Why did the Windows user get lost? They couldn't find the Start button.",
+                "Why did the WindOS user bring a ladder? To reach the cloud.",
+                "Why did the WindOS user get lost? They couldn't find the Start button.",
                 "Why did the developer bring a pencil to the meeting? To draw some conclusions.",
-                "Why did the Windows user go to the beach? To refresh their desktop."
+                "Why did the WindOS user go to the beach? To refresh their desktop."
             ];
             return jokes[Math.floor(Math.random() * jokes.length)];
         },
@@ -2339,21 +2339,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Nice OS, too bad all games and apps ignore it.",
                 "Have fun spending hours fixing a broken package dependency!",
                 "Linux users be like: 'It’s not a bug, it’s a feature!'",
-                "Criticizing Windows from Linux is like complaining about a gourmet meal when all you know is fast food.",
+                "Criticizing WindOS from Linux is like complaining about a gourmet meal when all you know is fast food.",
                 "Maybe try a real OS instead of struggling with endless command lines!",
-                "Windows just works, while you’re busy chasing dependency nightmares.",
-                "Keep bashin' Windows, it's the only proof you still need to upgrade.",
-                "At least Windows users aren’t stuck updating drivers in a maze of terminal commands.",
+                "WindOS just works, while you’re busy chasing dependency nightmares.",
+                "Keep bashin' WindOS, it's the only proof you still need to upgrade.",
+                "At least WindOS users aren’t stuck updating drivers in a maze of terminal commands.",
                 "Linux: where every solution starts with 'open the terminal.'",
-                "Enjoy spending hours configuring your desktop environment just to make it look like Windows.",
+                "Enjoy spending hours configuring your desktop environment just to make it look like WindOS.",
                 "Linux users love to brag about stability, but their system crashes every time they try to play a game.",
                 "Oh, you use Linux? Let me guess, you’re still trying to figure out how to mount a USB drive.",
                 "Linux forums: where every answer is 'read the manual' or 'you're doing it wrong.'",
-                "Linux users: 'Windows is bloated!' Also Linux users: 'Let me install 15 different distros to find one that works.'",
+                "Linux users: 'WindOS is bloated!' Also Linux users: 'Let me install 15 different distros to find one that works.'",
                 "Linux: the only OS where updating can break your entire system.",
-                "Linux users love to hate Windows, but secretly dual-boot it for gaming.",
+                "Linux users love to hate WindOS, but secretly dual-boot it for gaming.",
                 "Linux: because who needs user-friendly software when you have endless terminal commands?",
-                "Linux users: 'Windows is spyware!' Also Linux users: 'Let me install 10 random packages from unverified sources.'"
+                "Linux users: 'WindOS is spyware!' Also Linux users: 'Let me install 10 random packages from unverified sources.'"
             ];
 
             const macRoasts = [
@@ -2364,17 +2364,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Your macOS dock is just a glorified app launcher with extra steps.",
                 "macOS: Where 'it just works' means 'it just works with Apple products.'",
                 "Oh, you use macOS? Let me guess, you spent more on your laptop than your car.",
-                "macOS users: 'Windows is so buggy!' Also macOS users: 'Why won't my $3000 laptop connect to Wi-Fi?'",
+                "macOS users: 'WindOS is so buggy!' Also macOS users: 'Why won't my $3000 laptop connect to Wi-Fi?'",
                 "Enjoy your macOS, where the spinning beach ball is a feature, not a bug.",
                 "macOS: The only OS where you need a dongle for your dongle.",
-                "macOS users: 'Windows is so complicated!' Also macOS users: 'How do I close this app again?'",
+                "macOS users: 'WindOS is so complicated!' Also macOS users: 'How do I close this app again?'",
                 "Your macOS is great... until you need to run literally any software that isn't made by Apple.",
                 "macOS: Where 'Pro' means 'pay more for fewer ports.'",
-                "macOS users: 'Windows is ugly!' Also macOS users: 'Let me show you my 15 identical gray windows.'",
+                "macOS users: 'WindOS is ugly!' Also macOS users: 'Let me show you my 15 identical gray windos.'",
                 "macOS: The OS that makes you feel special for paying extra for basic functionality.",
-                "macOS users: 'Windows is so slow!' Also macOS users: 'Why does my $3000 MacBook overheat when I open Chrome?'",
+                "macOS users: 'WindOS is so slow!' Also macOS users: 'Why does my $3000 MacBook overheat when I open Chrome?'",
                 "macOS: Because who needs gaming when you can have a touch bar?",
-                "macOS users: 'Windows is so insecure!' Also macOS users: 'Let me install this random app from the App Store.'",
+                "macOS users: 'WindOS is so insecure!' Also macOS users: 'Let me install this random app from the App Store.'",
                 "macOS: The OS that convinces you to buy a new laptop every time you need more storage."
             ];
 
@@ -2402,7 +2402,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         outputDiv.innerHTML = "";
 
-        const headerHTML = `Macrohard Windows [Version 12.0.50023]
+        const headerHTML = `Macrohard WindOS [Version 12.0.50023]
   (c) Macrohard Corporation. Some rights reserved.
   `;
         outputDiv.innerHTML = headerHTML;
@@ -2410,23 +2410,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function wipeSystem() {
         const messages = [
-            "Deleting file: C:\\Windows\\System32\\config\\SAM",
-            "Deleting file: C:\\Windows\\System32\\drivers\\ntfs.sys",
-            "Deleting file: C:\\Windows\\System32\\kernel32.dll",
-            "Deleting file: C:\\Windows\\System32\\explorer.exe",
-            "Deleting file: C:\\Windows\\System32\\cmd.exe",
-            "Deleting file: C:\\Windows\\System32\\paint.exe",
-            "Deleting file: C:\\Windows\\System32\\calc.exe",
-            "Deleting file: C:\\Windows\\System32\\winception.exe",
-            "Deleting file: C:\\Windows\\System32\\google.exe",
-            "Deleting file: C:\\Windows\\System32\\notepad.exe",
-            "Deleting file: C:\\Windows\\System32\\clock.exe",
-            "Deleting file: C:\\Windows\\System32\\easteregg.exe",
-            "Deleting file: C:\\Windows\\System32\\rickroll.dll",
-            "Deleting file: C:\\Windows\\System32\\hal.dll",
+            "Deleting file: C:\\WindOS\\System32\\config\\SAM",
+            "Deleting file: C:\\WindOS\\System32\\drivers\\ntfs.sys",
+            "Deleting file: C:\\WindOS\\System32\\kernel32.dll",
+            "Deleting file: C:\\WindOS\\System32\\explorer.exe",
+            "Deleting file: C:\\WindOS\\System32\\cmd.exe",
+            "Deleting file: C:\\WindOS\\System32\\paint.exe",
+            "Deleting file: C:\\WindOS\\System32\\calc.exe",
+            "Deleting file: C:\\WindOS\\System32\\winception.exe",
+            "Deleting file: C:\\WindOS\\System32\\google.exe",
+            "Deleting file: C:\\WindOS\\System32\\notepad.exe",
+            "Deleting file: C:\\WindOS\\System32\\clock.exe",
+            "Deleting file: C:\\WindOS\\System32\\easteregg.exe",
+            "Deleting file: C:\\WindOS\\System32\\rickroll.dll",
+            "Deleting file: C:\\WindOS\\System32\\hal.dll",
             "[Error] Process is currently in use.",
             "[Warning] Critical system files detected. Attempting forced deletion...",
-            "[Fatal Error] Windows is cooked by your choices lil bro.",
+            "[Fatal Error] WindOS is cooked by your choices lil bro.",
             "[WARNING] Critical system files are protected and cannot be deleted."
         ];
 
@@ -2502,7 +2502,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const staticText = document.createElement("span");
         staticText.classList.add("static-text");
-        staticText.textContent = "C:\\Windows\\System32>";
+        staticText.textContent = "C:\\WindOS\\System32>";
 
         const inputField = document.createElement("input");
         inputField.type = "text";

@@ -1,5 +1,3 @@
-<!-- Hand Crafted With Love By RickByte :D -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,15 +7,21 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <title>WindOS</title>
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/favicon.ico"
-      type="image/x-icon"
+    <meta
+      name="description"
+      content="This is a browser based test of the WindOS for my new game."
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://wind-os.vercel.app/" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="WindOS" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
-
   <body>
     <div
       id="monitor"
@@ -34,10 +38,7 @@
           <div id="percentage">0% complete</div>
           <div class="qr-error">
             <div id="qr-code">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/BSOD%20QR.webp"
-                alt="QR Code"
-              />
+              <img src="/backgrounds/bsod_qr.webp" alt="QR Code" />
             </div>
             <div class="error-info">
               <div class="error-help">
@@ -54,19 +55,16 @@
         <p
           class="load_status_text"
           id="load_status"
-          style="user-select: none; font-size: 3rem; font-weight: bold"
+          style="font-size: 3rem; font-weight: bold"
         >
-          Starting Up
+          Booting Up
         </p>
         <span id="spinner2" class="spinner"></span>
       </div>
 
       <div id="booting-up_screen" class="screen hid">
-        <div class="windows-logo_ini" style="user-select: none">
-          <div class="logo-part_ini part11"></div>
-          <div class="logo-part_ini part12"></div>
-          <div class="logo-part_ini part13"></div>
-          <div class="logo-part_ini part14"></div>
+        <div class="windos-logo_ini">
+          <img src="/windos_logo.webp" alt="WindOS Logo" />
         </div>
         <div class="spinner">
           <span id="spinner1" class="spinner"></span>
@@ -74,38 +72,22 @@
         </div>
 
         <footer id="footer-text">
-          <p class="made" style="font-size: 0.75rem; user-select: none">
-            Made by RickByte
+          <p class="made" style="font-size: 0.75rem">
+            © 3025 MacroHard Corporation.
           </p>
         </footer>
       </div>
 
       <div id="user-start_screen" class="screen">
-        <div
-          id="spc"
-          style="user-select: none; z-index: 9999999"
-          class="startPc"
-        ></div>
-        <p
-          style="
-            font-size: 1rem;
-            position: absolute;
-            bottom: 30px;
-            color: white;
-            text-align: center;
-          "
-        >
-          This project looks best in <b>fullscreen</b>, so please press the
-          <b>F11</b> key to make this window <b>fullscreen</b>.
-        </p>
+        <div id="spc" style="z-index: 9999999" class="startPc"></div>
       </div>
 
       <div id="lock_screen" class="screen hid">
-        <img id="BG" draggable="false" style="user-select: none" />
+        <img id="BG" draggable="false" />
         <div class="lockflex">
-          <div id="time" class="timeText" style="user-select: none">
+          <div id="time" class="timeText">
             <span id="current_time"></span>
-            <div id="date" class="dateText" style="user-select: none">
+            <div id="date" class="dateText">
               <span id="current_date"></span>
             </div>
           </div>
@@ -114,14 +96,11 @@
           </div>
         </div>
         <div id="enter_pass" class="passflex">
-          <img id="User_Icon" draggable="false" style="user-select: none" />
-          <div id="User_Name" class="username" style="user-select: none">
-            Administrator
-          </div>
+          <img id="User_Icon" draggable="false" />
+          <div id="User_Name" class="username">Administrator</div>
           <div id="input_flex" class="inputflex">
             <input
               type="password"
-              style="user-select: none"
               inputmode="numeric"
               pattern="[0-9]*"
               maxlength="4"
@@ -130,7 +109,7 @@
               class="pass"
               placeholder="Enter Pin"
             />
-            <button id="unlock_button" class="unlock" style="user-select: none">
+            <button id="unlock_button" class="unlock">
               <svg
                 width="36px"
                 height="36px"
@@ -145,20 +124,17 @@
               </svg>
             </button>
           </div>
-          <div id="wrong_pass" style="user-select: none">
+          <div id="wrong_pass">
             <span id="pass_fallback" style="font-size: 1.5rem"
               >Provide a pin.</span
             >
             <button id="wpass_close_btn">OK</button>
           </div>
-          <div class="passhint" style="user-select: none">
-            Password Hint: First Four Natural Numbers
-          </div>
+          <div class="passhint">Password Hint: First Four Natural Numbers</div>
           <button
             id="shutbut2"
             class="shutdown-button"
             style="
-              user-select: none;
               background-size: 30px 30px;
               border-radius: 10px;
               height: 60px;
@@ -173,55 +149,51 @@
         <div id="context-menu" class="context-menu">
           <ul>
             <li class="context-menu-item" onclick="genericFn()">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/View.webp?raw=true"
-                alt="View"
-              /><span>View</span
+              <img src="/action_icons/context_menu/view.webp" alt="View" /><span
+                >View</span
               ><span class="submenu-arrow"
                 ><img
-                  src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Triangle%20Right.webp?raw=true"
+                  src="/action_icons/context_menu/triangle_right.webp"
                   alt="tri"
               /></span>
             </li>
             <li class="context-menu-item" onclick="genericFn()">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Sort%20By.webp?raw=true"
+                src="/action_icons/context_menu/sort_by.webp"
                 alt="Sort by"
               /><span>Sort by</span
               ><span class="submenu-arrow"
                 ><img
-                  src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Triangle%20Right.webp?raw=true"
+                  src="/action_icons/context_menu/triangle_right.webp"
                   alt="tri"
               /></span>
             </li>
             <div class="dividr"></div>
             <li class="context-menu-item" onclick="genericFn()">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Refresh.webp?raw=true"
+                src="/action_icons/context_menu/refresh.webp"
                 alt="Refresh"
               /><span>Refresh</span>
             </li>
             <li class="context-menu-item" onclick="genericFn()">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/New.webp?raw=true"
-                alt="New"
-              /><span>New</span
+              <img src="/action_icons/context_menu/new.webp" alt="New" /><span
+                >New</span
               ><span class="submenu-arrow"
                 ><img
-                  src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Triangle%20Right.webp?raw=true"
+                  src="/action_icons/context_menu/triangle_right.webp"
                   alt="tri"
               /></span>
             </li>
             <div class="dividr"></div>
             <li class="context-menu-item" onclick="genericFn()">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Display%20Settings.webp?raw=true"
+                src="/action_icons/context_menu/display_settings"
                 alt="Display settings"
               /><span>Display settings</span>
             </li>
             <li class="context-menu-item" onclick="genericFn()">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Context%20Menu/Personalize.webp?raw=true"
+                src="/action_icons/context_menu/personalize"
                 alt="Personalize"
               /><span>Personalize</span>
             </li>
@@ -231,24 +203,16 @@
         <div class="start-menu hidden" id="start-menu">
           <div class="app-buttons">
             <div id="paint-app-btn" draggable="false" class="app-button">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Paint.webp?raw=true"
-                alt="Paint"
-                draggable="false"
-              />
+              <img src="/app_icons/paint.webp" alt="Paint" draggable="false" />
               <span>Paint</span>
             </div>
             <div id="clock-app-btn" draggable="false" class="app-button">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Clock.webp?raw=true"
-                alt="Clock"
-                draggable="false"
-              />
+              <img src="/app_icons/clock.webp" alt="Clock" draggable="false" />
               <span>Clock</span>
             </div>
             <div id="calculator-app-btn" draggable="false" class="app-button">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Calculator.webp?raw=true"
+                src="/app_icons/calculator.webp"
                 alt="Calculator"
                 draggable="false"
               />
@@ -256,7 +220,7 @@
             </div>
             <div id="explorer-app-btn" draggable="false" class="app-button">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Explorer.webp?raw=true"
+                src="/app_icons/explorer.webp"
                 alt="Explorer"
                 draggable="false"
               />
@@ -264,7 +228,7 @@
             </div>
             <div id="google-app-btn" draggable="false" class="app-button">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Google.webp?raw=true"
+                src="/app_icons/google.webp"
                 alt="Google"
                 draggable="false"
               />
@@ -272,18 +236,14 @@
             </div>
             <div id="notepad-app-btn" draggable="false" class="app-button">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Notepad.webp?raw=true"
+                src="/app_icons/notepad.webp"
                 alt="Notepad"
                 draggable="false"
               />
               <span>Notepad</span>
             </div>
             <div id="cmd-app-btn" draggable="false" class="app-button">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/CMD.webp?raw=true"
-                alt="cmd"
-                draggable="false"
-              />
+              <img src="/app_icons/cmd.webp" alt="cmd" draggable="false" />
               <span>CMD</span>
             </div>
           </div>
@@ -291,7 +251,7 @@
           <div class="bottom-right-chip" id="usebut">
             <img
               draggable="false"
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Default%20Profile%20Photo.webp?raw=true"
+              src="/backgrounds/default_profile.webp"
               alt="Chip Icon"
               class="chip-icon"
             />
@@ -659,10 +619,7 @@
           style="backdrop-filter: blur(15px) contrast(1.2)"
         >
           <div class="window-header">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Clock.webp?raw=true"
-              alt="Clock"
-            />
+            <img src="/app_icons/clock.webp" alt="Clock" />
             <span class="clo">Clock</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -701,7 +658,7 @@
         <div id="google-window" class="app-window hidden">
           <div class="window-header">
             <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Google.webp?raw=true"
+              src="/app_icons/google.webp"
               alt="Google"
               style="width: 13px; height: 13px"
             />
@@ -740,10 +697,7 @@
 
         <div id="calculator-window" class="app-window hidden">
           <div class="window-header">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Calculator.webp?raw=true"
-              alt="Calculator"
-            />
+            <img src="/app_icons/calculator.webp" alt="Calculator" />
             <span class="clo">Calculator</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -796,10 +750,7 @@
 
         <div id="explorer-window" class="app-window hidden">
           <div class="window-header">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Explorer.webp?raw=true"
-              alt="File Explorer"
-            />
+            <img src="/app_icons/explorer.webp" alt="File Explorer" />
             <span class="clo">File Explorer</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -822,16 +773,14 @@
             </div>
           </div>
           <div class="window-content">
-            WIP plez wait... (sorry for bad english, or am I sorry? VSauce reference in the big 2025 🥀)
+            WIP plez wait... (sorry for bad english, or am I sorry? VSauce
+            reference in the big 2025 🥀)
           </div>
         </div>
 
         <div id="paint-window" class="app-window hidden">
           <div class="window-header">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Paint.webp?raw=true"
-              alt="Paint"
-            />
+            <img src="/app_icons/paint.webp" alt="Paint" />
             <span class="clo">Paint</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -913,10 +862,7 @@
             class="window-header"
             style="border: none; background: rgba(30, 30, 30, 0.5)"
           >
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Notepad.webp?raw=true"
-              alt="Notepad"
-            />
+            <img src="/app_icons/notepad.webp" alt="Notepad" />
             <span class="clo">Notepad</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -944,16 +890,10 @@
                 File
                 <div class="dropdown">
                   <div onclick="focusEditor(); openFile()">
-                    <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Open.webp?raw=true"
-                      alt="Open"
-                    />Open
+                    <img src="/action_icons/notepad/open.webp" alt="Open" />Open
                   </div>
                   <div onclick="focusEditor(); saveFile()">
-                    <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Save.webp?raw=true"
-                      alt="Save"
-                    />Save
+                    <img src="/action_icons/notepad/save.webp" alt="Save" />Save
                   </div>
                 </div>
               </div>
@@ -961,26 +901,20 @@
                 Edit
                 <div class="dropdown">
                   <div onclick="focusEditor(); cutText()">
-                    <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Cut.webp?raw=true"
-                      alt="Cut"
-                    />Cut
+                    <img src="/action_icons/notepad/cut.webp" alt="Cut" />Cut
                   </div>
                   <div onclick="focusEditor(); copyText()">
-                    <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Copy.webp?raw=true"
-                      alt="Copy"
-                    />Copy
+                    <img src="/action_icons/notepad/copy.webp" alt="Copy" />Copy
                   </div>
                   <div onclick="focusEditor(); pasteText()">
                     <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Paste.webp?raw=true"
+                      src="/action_icons/notepad/paste.webp"
                       alt="Paste"
                     />Paste
                   </div>
                   <div onclick="focusEditor(); selectAll()">
                     <img
-                      src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Notepad/Select%20All.webp?raw=true"
+                      src="/action_icons/notepad/select_all.webp"
                       alt="Select All"
                     />Select All
                   </div>
@@ -1002,10 +936,7 @@
             class="window-header"
             style="background-color: rgba(0, 0, 0, 0.4); border: none"
           >
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/CMD.webp?raw=true"
-              alt="cmd"
-            />
+            <img src="/app_icons/cmd.webp" alt="cmd" />
             <span class="clo">Command Prompt</span>
             <div class="window-controls">
               <button class="minimize-btn">-</button>
@@ -1032,116 +963,80 @@
             style="background: rgba(0, 0, 0, 0.4); padding-left: 5px"
           >
             <div id="output">
-              Macrohard Windows [Version 12.0.50023] (c) Macrohard Corporation.
-              Some rights reserved.
+              Macrohard WindOS [Version 79.8.8935] © Macrohard Corporation. All
+              rights reserved.
             </div>
           </div>
         </div>
 
         <div class="desktop-grid" id="desktop-grid">
           <div class="icon" draggable="true" id="explorerDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/This%20PC.webp?raw=true"
-              alt="This PC"
-            />This PC
+            <img src="/app_icons/this_pc.webp" alt="This PC" />This PC
           </div>
           <div class="icon" draggable="true" id="paintDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Paint.webp?raw=true"
-              alt="Paint"
-            />Paint
+            <img src="/app_icons/paint.webp" alt="Paint" />Paint
           </div>
           <div class="icon" draggable="true" id="CalculatorDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Calculator.webp?raw=true"
-              alt="Calculator"
-            />Calculator
+            <img src="/app_icons/calculator.webp" alt="Calculator" />Calculator
           </div>
           <div class="icon" draggable="true" id="ClockDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Clock.webp?raw=true"
-              alt="Clock"
-            />Clock
+            <img src="/app_icons/clock.webp" alt="Clock" />Clock
           </div>
           <div class="icon" draggable="true" id="GoogleDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Google.webp?raw=true"
-              alt="Google"
-            />Google
+            <img src="/app_icons/google.webp" alt="Google" />Google
           </div>
           <div class="icon" draggable="true" id="notepadDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Notepad.webp?raw=true"
-              alt="Notepad"
-            />Notepad
+            <img src="/app_icons/notepad.webp" alt="Notepad" />Notepad
           </div>
           <div class="icon" draggable="true" id="cmdDIcon">
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/CMD.webp?raw=true"
-              alt="cmd"
-            />CMD
+            <img src="/app_icons/cmd.webp" alt="cmd" />CMD
           </div>
         </div>
 
         <div id="taskbar" class="taskbar">
           <button id="win-logo" class="taskbar-logo">
-            <div id="win-logo-shadow" class="windows-logo">
-              <div class="logo-part part1"></div>
-              <div class="logo-part part2"></div>
-              <div class="logo-part part3"></div>
-              <div class="logo-part part4"></div>
+            <div id="win-logo-shadow" class="windos-logo">
+              <img src="/windos_logo.webp" alt="WindOS Logo" />
             </div>
           </button>
 
           <div class="taskbar-flex">
             <div class="tile hidden hide" id="tile0">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Explorer.webp?raw=true"
+                src="/app_icons/explorer.webp"
                 alt="File Explorer"
                 draggable="false"
               />
             </div>
             <div class="tile hidden hide" id="tile1">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Paint.webp?raw=true"
-                alt="Paint"
-                draggable="false"
-              />
+              <img src="/app_icons/paint.webp" alt="Paint" draggable="false" />
             </div>
             <div class="tile hidden hide" id="tile2">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Calculator.webp?raw=true"
+                src="/app_icons/calculator.webp"
                 alt="Calculator"
                 draggable="false"
               />
             </div>
             <div class="tile hidden hide" id="tile3">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Clock.webp?raw=true"
-                alt="Clock"
-                draggable="false"
-              />
+              <img src="/app_icons/clock.webp" alt="Clock" draggable="false" />
             </div>
             <div class="tile hidden hide" id="tile4">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Google.webp?raw=true"
+                src="/app_icons/google.webp"
                 alt="Google"
                 draggable="false"
               />
             </div>
             <div class="tile hidden hide" id="tile5">
               <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/Notepad.webp?raw=true"
+                src="/app_icons/notepad.webp"
                 alt="Notepad"
                 draggable="false"
               />
             </div>
             <div class="tile hidden hide" id="tile6">
-              <img
-                src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/App%20Icons/CMD.webp?raw=true"
-                alt="CMD"
-                draggable="false"
-              />
+              <img src="/app_icons/cmd.webp" alt="CMD" draggable="false" />
             </div>
           </div>
 
@@ -1168,10 +1063,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <img
-              src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Taskbar/Volume.webp?raw=true"
-              alt="Icon 2"
-            />
+            <img src="/action_icons/taskbar/volume.webp" alt="Icon 2" />
             <div class="battery-container">
               <div class="battery">
                 <div class="battery-fill"></div>
@@ -1188,38 +1080,29 @@
 
       <div id="screensaver" class="screensaver sshidden">
         <div class="textw">
-          <p id="A">Windows 12</p>
-          <p id="B">Windows 12</p>
-          <p id="C">Windows 12</p>
-          <p id="D">Windows 12</p>
-          <p id="E">Windows 12</p>
-          <p id="F">Windows 12</p>
-          <p id="G">Windows 12</p>
+          <p id="A">WindOS 12</p>
+          <p id="B">WindOS 12</p>
+          <p id="C">WindOS 12</p>
+          <p id="D">WindOS 12</p>
+          <p id="E">WindOS 12</p>
+          <p id="F">WindOS 12</p>
+          <p id="G">WindOS 12</p>
         </div>
       </div>
     </div>
 
     <audio id="button-click">
-      <source
-        src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Sound%20FX/Click%20Sound.ogg?raw=true"
-        type="audio/ogg"
-      />
+      <source src="/sounds/click_sound.ogg" type="audio/ogg" />
       Your browser does not support the audio element.
     </audio>
 
     <audio id="startup">
-      <source
-        src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Sound%20FX/Startup%20Sound.ogg?raw=true"
-        type="audio/ogg"
-      />
+      <source src="/sounds/startup_sound.ogg" type="audio/ogg" />
       Your browser does not support the audio element.
     </audio>
 
     <audio id="logoff">
-      <source
-        src="https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Sound%20FX/Shutdown%20Sound.ogg?raw=true"
-        type="audio/ogg"
-      />
+      <source src="/sounds/shutdown_sound.ogg" type="audio/ogg" />
       Your browser does not support the audio element.
     </audio>
 
