@@ -1,5 +1,3 @@
-import "../styles/style.css";
-
 document.addEventListener("DOMContentLoaded", () => {
 
     // No way I'm writing comments for every element :~/
