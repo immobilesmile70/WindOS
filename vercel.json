@@ -2,14 +2,8 @@
   "version": 2,
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/site.webmanifest", "destination": "/site.webmanifest" },
     { "source": "/manifest.json", "destination": "/site.webmanifest" },
     { "source": "/manifest", "destination": "/site.webmanifest" },
-    { "source": "/sw.js", "destination": "/service-worker.js" },
-    { "source": "/static/:path*", "destination": "/static/:path*" },
-    { "source": "/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/stopcode", "destination": "/pages/stopcode.html" },
-    { "source": "/:path*", "destination": "index.html" }
+    { "source": "/stopcode", "destination": "/pages/stopcode.html" }
   ]
 }
