@@ -294,7 +294,7 @@ input.pass:hover {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.jpg?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.png?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,7 +311,7 @@ input.pass:hover {
 }
 
 #Desktop {
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.jpg?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.png?raw=true');
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;

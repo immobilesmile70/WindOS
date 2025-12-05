@@ -33,26 +33,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const statusText = document.getElementById("load_status");
     const clockWindow = document.getElementById("clock-window");
     const googleWindow = document.getElementById('google-window');
-    const winWindow = document.getElementById('win-window');
     const calculatorWindow = document.getElementById("calculator-window");
     const paintWindow = document.getElementById("paint-window");
+    const explorerWindow = document.getElementById("explorer-window");
     const notepadWindow = document.getElementById("notepad-window");
     const cmdWindow = document.getElementById("cmd-window");
     const clockAppBtn = document.getElementById("clock-app-btn");
     const calculatorAppBtn = document.getElementById("calculator-app-btn");
     const paintAppBtn = document.getElementById("paint-app-btn");
+    const explorerAppBtn = document.getElementById("explorer-app-btn");
     const notepadAppBtn = document.getElementById("notepad-app-btn");
     const cmdAppBtn = document.getElementById("cmd-app-btn");
     const eeAppButton = document.getElementById("ee-app-btn");
     const googleAppBtn = document.getElementById('google-app-btn');
     const winAppBtn = document.getElementById('win-app-btn');
-    const eeWindow = document.getElementById("ee-window");
     const screensaver = document.getElementById("screensaver");
     const userStart = document.getElementById("user-start_screen");
     const userStartBtn = document.getElementById("spc");
     const taskbar = document.getElementById("taskbar");
     const bsodScreen = document.getElementById("containerB");
     const paintDIcon = document.getElementById("paintDIcon");
+    const explorerDIcon = document.getElementById("explorerDIcon");
     const notepadDIcon = document.getElementById("notepadDIcon");
     const cmdDIcon = document.getElementById("cmdDIcon");
     const calculatorDIcon = document.getElementById("CalculatorDIcon");
@@ -193,8 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
         loadingScreen.classList.remove("visible");
         setTimeout(() => {
             loadingScreen.classList.add("removeDOM");
-           stopSpinner2();
-           document.body.style.cursor = "default";
+            stopSpinner2();
+            document.body.style.cursor = "default";
         }, 1000);
     }
 
@@ -469,14 +470,104 @@ document.addEventListener("DOMContentLoaded", () => {
                 logOffSound.play();
             }
         }, 1500);
-        closeWindow(clockWindow, 2);
-        closeWindow(calculatorWindow, 1);
-        closeWindow(paintWindow, 0);
-        closeWindow(eeWindow, 6);
-        closeWindow(googleWindow, 3);
-        closeWindow(winWindow, 4);
+        closeWindow(clockWindow, 3);
+        closeWindow(calculatorWindow, 2);
+        closeWindow(paintWindow, 1);
+        closeWindow(explorerWindow, 0);
+        closeWindow(googleWindow, 4);
         closeWindow(notepadWindow, 5);
-        closeWindow(cmdWindow, 7);
+        closeWindow(cmdWindow, 6);
+        removeTilesSequentially();
+        passwordInput.value = "";
+        document.getElementById("winIframe").src = "";
+        document.getElementById("googleIframe").src = "";
+        clearAll();
+        clearAllCmd();
+        clickSound.play();
+        clickSound.volume = 0.1;
+        ctx1.clearRect(0, 0, canvas.width + 1000, canvas.height + 1000);
+        clearDisplay();
+        handleSwipeDown();
+        startMenu.classList.remove("show");
+        setTimeout(() => startMenu.classList.add("hidden"), 300);
+        quickSettings.classList.remove("show");
+        setTimeout(() => quickSettings.classList.add("hidden"), 300);
+        display.value === "0";
+    }
+
+    function restart() {
+        isRunning = false;
+        isOnLS = false;
+        statusText.textContent = "Restarting";
+        setTimeout(() => {
+            if (!isBSOD) {
+                logOffSound.volume = 1;
+                logOffSound.play();
+            }
+        }, 1500);
+        closeWindow(clockWindow, 3);
+        closeWindow(calculatorWindow, 2);
+        closeWindow(paintWindow, 1);
+        closeWindow(explorerWindow, 0);
+        closeWindow(googleWindow, 4);
+        closeWindow(notepadWindow, 5);
+        closeWindow(cmdWindow, 6);
+        removeTilesSequentially();
+        passwordInput.value = "";
+        document.getElementById("winIframe").src = "";
+        document.getElementById("googleIframe").src = "";
+        clearAll();
+        clearAllCmd();
+        clickSound.play();
+        clickSound.volume = 0.1;
+        ctx1.clearRect(0, 0, canvas.width + 1000, canvas.height + 1000);
+        clearDisplay();
+        handleSwipeDown();
+        startMenu.classList.remove("show");
+        setTimeout(() => startMenu.classList.add("hidden"), 300);
+        quickSettings.classList.remove("show");
+        setTimeout(() => quickSettings.classList.add("hidden"), 300);
+        display.value === "0";
+    }
+
+    function lock() {
+        isRunning = true;
+        isOnLS = true;
+        statusText.textContent = "Locking";
+        setTimeout(() => {
+            if (!isBSOD) {
+                logOffSound.volume = 1;
+                logOffSound.play();
+            }
+        }, 1500);
+        removeTilesSequentially();
+        passwordInput.value = "";
+        clickSound.play();
+        clickSound.volume = 0.1;
+        handleSwipeDown();
+        startMenu.classList.remove("show");
+        setTimeout(() => startMenu.classList.add("hidden"), 300);
+        quickSettings.classList.remove("show");
+        setTimeout(() => quickSettings.classList.add("hidden"), 300);
+    }
+
+    function signOut() {
+        isRunning = true;
+        isOnLS = true;
+        statusText.textContent = "Signing Off";
+        setTimeout(() => {
+            if (!isBSOD) {
+                logOffSound.volume = 1;
+                logOffSound.play();
+            }
+        }, 1500);
+        closeWindow(clockWindow, 3);
+        closeWindow(calculatorWindow, 2);
+        closeWindow(paintWindow, 1);
+        closeWindow(explorerWindow, 0);
+        closeWindow(googleWindow, 4);
+        closeWindow(notepadWindow, 5);
+        closeWindow(cmdWindow, 6);
         removeTilesSequentially();
         passwordInput.value = "";
         document.getElementById("winIframe").src = "";
@@ -745,8 +836,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Taskbar Tiles and App Open/Close/Minimize/Maximize/Drag/Resize Logic (Holy Shi- [Pain Intensifies!!!!!!!!!])
 
-    const windowIds = ["paint-window", "calculator-window", "clock-window", "google-window", "win-window", "notepad-window", "ee-window", "cmd-window"];
-    const tileIds = ["tile0", "tile1", "tile2", "tile3", "tile4", "tile5", "tile6", "tile7"];
+    const windowIds = ["explorer-window", "paint-window", "calculator-window", "clock-window", "google-window", "notepad-window", "cmd-window"];
+    const tileIds = ["tile0", "tile1", "tile2", "tile3", "tile4", "tile5", "tile6"];
     let tileOrder = [];
     const ttaskbar = document.querySelector('.taskbar-flex');
 
@@ -840,7 +931,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (windowElement.classList.contains("minimized")) {
                 bounceUpAndReset(tile);
             }
-            else{
+            else {
                 bounceAtPlace(tile)
             }
 
@@ -1385,14 +1476,13 @@ document.addEventListener("DOMContentLoaded", () => {
     makeWindowDraggable(clockWindow, 100, 175);
     makeWindowDraggable(calculatorWindow, 200, 300);
     makeWindowDraggable(paintWindow, 600, 400);
-    makeWindowDraggable(eeWindow, 290, 316.6);
+    makeWindowDraggable(explorerWindow, 600, 400);
     makeWindowDraggable(googleWindow, 600, 400);
-    makeWindowDraggable(winWindow, 600, 400);
     makeWindowDraggable(notepadWindow, 600, 400);
     makeWindowDraggable(cmdWindow, 450, 225);
 
     clockAppBtn.addEventListener("click", () => {
-        openWindow(clockWindow, 2);
+        openWindow(clockWindow, 3);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
@@ -1400,7 +1490,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     googleAppBtn.addEventListener('click', () => {
-        openWindow(googleWindow, 3);
+        openWindow(googleWindow, 4);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
@@ -1408,17 +1498,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("googleIframe").src = "https://www.google.com/search?igu=1";
     });
 
-    winAppBtn.addEventListener('click', () => {
-        openWindow(winWindow, 4);
+    paintAppBtn.addEventListener("click", () => {
+        openWindow(paintWindow, 1);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
         clickSound.play();
-        document.getElementById("winIframe").src = "https://windows-web-clone-liart.vercel.app/";
     });
 
-    paintAppBtn.addEventListener("click", () => {
-        openWindow(paintWindow, 0);
+    explorerAppBtn.addEventListener("click", () => {
+        openWindow(explorerWindow, 0);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
@@ -1434,7 +1523,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cmdAppBtn.addEventListener("click", () => {
-        openWindow(cmdWindow, 7);
+        openWindow(cmdWindow, 6);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
@@ -1442,13 +1531,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     winClock.addEventListener("click", () => {
-        openWindow(clockWindow, 2);
+        openWindow(clockWindow, 3);
         clickSound.volume = 0.1;
         clickSound.play();
     });
 
     calculatorAppBtn.addEventListener("click", () => {
-        openWindow(calculatorWindow, 1);
+        openWindow(calculatorWindow, 2);
         startMenu.classList.remove("show");
         setTimeout(() => startMenu.classList.add("hidden"), 300);
         clickSound.volume = 0.1;
@@ -2365,30 +2454,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 openWindow(notepadWindow, 5);
                 break;
             case "calculator":
-                openWindow(calculatorWindow, 1);
+                openWindow(calculatorWindow, 2);
                 break;
             case "google":
-                openWindow(googleWindow, 3);
+                openWindow(googleWindow, 4);
                 break;
             case "paint":
-                openWindow(paintWindow, 0);
+                openWindow(paintWindow, 1);
+                break;
+            case "explorer":
+                openWindow(explorerWindow, 0);
                 break;
             case "clock":
-                openWindow(clockWindow, 2);
-                break;
-            case "winception":
-                openWindow(winWindow, 4);
-                break;
-            case "about":
-                openWindow(eeWindow, 6);
+                openWindow(clockWindow, 3);
                 break;
             case "cmd":
-                return "cmd with ID [7] is already running";
-                break;
-            case "Ccmd":
-                closeWindow(cmdWindow, 7);
-                setTimeout(() => { createInputLine(); clearAll(); }, 700);
-                break;
+                return "cmd with ID [6] is already running";
             default:
                 return "Application not found";
         }
@@ -2695,58 +2776,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     paintDIcon.addEventListener('dblclick', () => {
-        openWindow(paintWindow, 0);
+        openWindow(paintWindow, 1);
         clickSound.volume = 0.1;
         clickSound.play();
         paintDIcon.classList.remove('active');
     });
 
+    explorerDIcon.addEventListener('dblclick', () => {
+        openWindow(explorerWindow, 0);
+        clickSound.volume = 0.1;
+        clickSound.play();
+        explorerDIcon.classList.remove('active');
+    });
+
     calculatorDIcon.addEventListener('dblclick', () => {
-        openWindow(calculatorWindow, 1);
+        openWindow(calculatorWindow, 2);
         clickSound.volume = 0.1;
         clickSound.play();
         calculatorDIcon.classList.remove('active');
     });
 
     clockDIcon.addEventListener('dblclick', () => {
-        openWindow(clockWindow, 2);
+        openWindow(clockWindow, 3);
         clickSound.volume = 0.1;
         clickSound.play();
         clockDIcon.classList.remove('active');
     });
 
     googleDIcon.addEventListener('dblclick', () => {
-        openWindow(googleWindow, 3);
+        openWindow(googleWindow, 4);
         document.getElementById("googleIframe").src = "https://www.google.com/search?igu=1";
         clickSound.volume = 0.1;
         clickSound.play();
         googleDIcon.classList.remove('active');
     });
 
-    windowsDIcon.addEventListener('dblclick', () => {
-        openWindow(winWindow, 4);
-        document.getElementById("winIframe").src = "https://windows-web-clone-liart.vercel.app/";
-        clickSound.volume = 0.1;
-        clickSound.play();
-        windowsDIcon.classList.remove('active');
-    });
-
-    moreDIcon.addEventListener('dblclick', () => {
-        openWindow(eeWindow, 6);
-        clickSound.volume = 0.1;
-        clickSound.play();
-        moreDIcon.classList.remove('active');
-    });
-
-    noteDIcon.addEventListener('dblclick', () => {
+    notepadDIcon.addEventListener('dblclick', () => {
         openWindow(notepadWindow, 5);
         clickSound.volume = 0.1;
         clickSound.play();
-        noteDIcon.classList.remove('active');
+        notepadDIcon.classList.remove('active');
     });
 
     cmdDIcon.addEventListener('dblclick', () => {
-        openWindow(cmdWindow, 7);
+        openWindow(cmdWindow, 6);
         clickSound.volume = 0.1;
         clickSound.play();
         cmdDIcon.classList.remove('active');
