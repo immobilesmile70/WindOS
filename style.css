@@ -14,7 +14,7 @@ body {
 .startPc {
     width: 85px;
     height: 95px;
-    background: url(https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Taskbar/Shutdown.webp?raw=true) no-repeat;
+    background: url(https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Taskbar/Shutdown.webp?raw=true) no-repeat;
     background-size: 100px;
     background-position-y: 50%;
     background-position-x: 48%;
@@ -90,7 +90,7 @@ body {
     margin-bottom: 15px;
     width: 155px;
     height: 155px;
-    background: url(https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Default%20Profile%20Photo.webp?raw=true);
+    background: url(https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Default%20Profile%20Photo.webp?raw=true);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -208,7 +208,7 @@ input.pass:hover {
 
 @font-face {
     font-family: 'SegoeBootSpinner';
-    src: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Fonts/segoe_slboot.ttf') format('truetype');
+    src: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Fonts/segoe_slboot.ttf') format('truetype');
 }
 
 .spinner {
@@ -294,7 +294,7 @@ input.pass:hover {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.png?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Wallpaper.png?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,7 +311,7 @@ input.pass:hover {
 }
 
 #Desktop {
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Wallpaper.png?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Wallpaper.png?raw=true');
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -898,7 +898,7 @@ input.pass:hover {
     position: absolute;
     bottom: 15px;
     right: 15px;
-    background: url("https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Taskbar/Shutdown.webp?raw=true") no-repeat;
+    background: url("https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Taskbar/Shutdown.webp?raw=true") no-repeat;
     box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
     background-position-x: 50%;
     background-position-y: 50%;
@@ -1463,7 +1463,7 @@ canvas {
     right: -163.5px;
     width: 25px;
     height: 25px;
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Paint/Eraser(paint).webp?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Eraser(paint).webp?raw=true');
     background-size: 25px 25px;
     background-position: center;
     border: none;
@@ -1477,7 +1477,7 @@ canvas {
     border-radius: 7px;
     width: 25px;
     height: 25px;
-    background-image: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Paint/Clear%20All%20(paint).webp?raw=true');
+    background-image: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Clear%20All%20(paint).webp?raw=true');
     background-size: 25px 25px;
     background-position: center;
     border: none;
@@ -1833,7 +1833,7 @@ canvas {
     width: 100px;
     height: 100px;
     justify-content: center;
-    background: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Dev%20Photo.jpg?raw=true');
+    background: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Dev%20Photo.jpg?raw=true');
     background-size: cover;
     background-position: center;
     border-radius: 50px;
@@ -2448,7 +2448,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Backgrounds/Black%20Overlay.webp?raw=true') center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Backgrounds/Black%20Overlay.webp?raw=true') center/cover no-repeat;
     opacity: 0;
     pointer-events: none;
     z-index: 99999;

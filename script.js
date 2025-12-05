@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const explorerAppBtn = document.getElementById("explorer-app-btn");
     const notepadAppBtn = document.getElementById("notepad-app-btn");
     const cmdAppBtn = document.getElementById("cmd-app-btn");
-    const eeAppButton = document.getElementById("ee-app-btn");
     const googleAppBtn = document.getElementById('google-app-btn');
     const winAppBtn = document.getElementById('win-app-btn');
     const screensaver = document.getElementById("screensaver");
@@ -2066,8 +2065,8 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleEraser.addEventListener("click", () => {
         erasing = !erasing;
         toggleEraser.style.backgroundImage = erasing
-            ? "url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Paint/Pen(paint).webp?raw=true')"
-            : "url('https://raw.githubusercontent.com/immobilesmile70/Windows-12-web/main/assets/Vector%20Icons/Paint/Eraser(paint).webp?raw=true')";
+            ? "url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Pen(paint).webp?raw=true')"
+            : "url('https://raw.githubusercontent.com/immobilesmile70/WindOS/main/assets/Vector%20Icons/Paint/Eraser(paint).webp?raw=true')";
         clickSound.volume = 0.1;
         clickSound.play();
         updatePointer();
@@ -2541,14 +2540,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 latestInput.focus();
             }
         }, 10);
-    });
-
-    eeAppButton.addEventListener("click", () => {
-        openWindow(eeWindow, 6);
-        startMenu.classList.remove("show");
-        setTimeout(() => startMenu.classList.add("hidden"), 300);
-        clickSound.volume = 0.1;
-        clickSound.play();
     });
 
     const allScreens = document.querySelectorAll(".screen, #taskbar, #screensaver");
