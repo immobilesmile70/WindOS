@@ -2815,3 +2815,5 @@ export function initWindOS()  {
         cmdDIcon.classList.remove('active');
     });
 }
+
+document.addEventListener("DOMContentLoaded", initWindOS);

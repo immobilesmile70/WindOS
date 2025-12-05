@@ -3,5 +3,9 @@
     "@vercel/analytics": "^1.5.0",
     "terser": "^5.44.1",
     "vite": "^7.2.4"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
   }
 }
