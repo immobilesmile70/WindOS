@@ -4,6 +4,7 @@
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/manifest.json", "destination": "/site.webmanifest" },
     { "source": "/manifest", "destination": "/site.webmanifest" },
-    { "source": "/stopcode", "destination": "/pages/stopcode.html" }
+    { "source": "/stopcode", "destination": "/pages/stopcode.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
