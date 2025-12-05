@@ -1,5 +1,4 @@
-export function initWindOS() {
-    // No way I'm writing comments for every element :~/
+document.addEventListener("DOMContentLoaded", () => {
     const bootingScreen = document.getElementById("booting-up_screen");
     const lockScreen = document.getElementById("lock_screen");
     const background = document.getElementById("BG");
@@ -2809,6 +2808,4 @@ export function initWindOS() {
         clickSound.play();
         cmdDIcon.classList.remove('active');
     });
-}
-
-document.addEventListener("DOMContentLoaded", initWindOS);
+});
