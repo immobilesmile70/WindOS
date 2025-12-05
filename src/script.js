@@ -1,4 +1,4 @@
-export function initWindOS()  {
+export function initWindOS() {
     // No way I'm writing comments for every element :~/
     const bootingScreen = document.getElementById("booting-up_screen");
     const lockScreen = document.getElementById("lock_screen");
@@ -2265,8 +2265,7 @@ export function initWindOS()  {
     const outputDiv = document.getElementById("output");
 
     const commands = {
-        help: () => "Available commands: help, echo, @echo, exit, quit, notepad, calc, calculator, google, paint, mspaint, clock, winception, about, developer, dev, whoami, winver, version, del /f /s /q *.*, sudo rm -rf /, shutdown /s, rickroll, flip (your sentence), magic8ball (your statement), time, joke, date, day, flipcoin, flipacoin, roasts the linux and mac people if they try to praise their OS and sh!t on windos",
-
+        help: () => "Available commands: help, echo, @echo, exit, quit, notepad, calc, calculator, google, paint, mspaint, clock, whoami, winver, version, del /f /s /q *.*, shutdown /s, rickroll, flip (your sentence), magic8ball (your statement), time, joke, date, day, flipcoin, flipacoin, roasts the linux and mac people if they try to praise their OS and sh!t on windos",
         echo: (args) => args.join(" "),
         "@echo": (args) => args.join(" "),
         exit: () => openApp("Ccmd"),
@@ -2276,20 +2275,14 @@ export function initWindOS()  {
         calc: () => openApp("calculator"),
         calculator: () => openApp("calculator"),
         "del /f /f /q *.*": () => wipeSystem(),
-        "sudo rm- rf /": () => wipeSystem(),
         "shutdown /s": () => shutDownCmd(),
         google: () => openApp("google"),
         paint: () => openApp("paint"),
         mspaint: () => openApp("paint"),
         clock: () => openApp("clock"),
-        winception: () => openApp("winception"),
-        about: () => openApp("about"),
-        developer: () => openApp("about"),
-        dev: () => openApp("about"),
-        github: () => openApp("about"),
         whoami: () => "Administrator",
-        winver: () => "The current windos version is 26H2!",
-        version: () => "The current windos version is 26H2!",
+        winver: () => "The current WindOS version is 32H2!",
+        version: () => "The current WindOS version is 32H2!",
         rickroll: () => {
             window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             return "Never Gonna Give You Up...";
@@ -2401,17 +2394,16 @@ export function initWindOS()  {
 
         outputDiv.innerHTML = "";
 
-        const headerHTML = `Macrohard WindOS [Version 12.0.50023]
-  (c) Macrohard Corporation. Some rights reserved.
-  `;
+        const headerHTML = `Macrohard WindOS 19 [Version 79.0.85125.8935]
+© Macrohard Corporation. All rights reserved.`;
         outputDiv.innerHTML = headerHTML;
     }
 
     function wipeSystem() {
         const messages = [
-            "Deleting file: C:\\WindOS\\System256\\config\\SAM",
-            "Deleting file: C:\\WindOS\\System256\\drivers\\ntfs.sys",
-            "Deleting file: C:\\WindOS\\System256\\kernel32.dll",
+            "Deleting file: C:\\WindOS\\System256\\config\\SAM-OAI.dll",
+            "Deleting file: C:\\WindOS\\System256\\drivers\\uwp-garbage.sys",
+            "Deleting file: C:\\WindOS\\System256\\kerne256.dll",
             "Deleting file: C:\\WindOS\\System256\\explorer.exe",
             "Deleting file: C:\\WindOS\\System256\\cmd.exe",
             "Deleting file: C:\\WindOS\\System256\\paint.exe",
@@ -2420,9 +2412,9 @@ export function initWindOS()  {
             "Deleting file: C:\\WindOS\\System256\\google.exe",
             "Deleting file: C:\\WindOS\\System256\\notepad.exe",
             "Deleting file: C:\\WindOS\\System256\\clock.exe",
-            "Deleting file: C:\\WindOS\\System256\\easteregg.exe",
-            "Deleting file: C:\\WindOS\\System256\\rickroll.dll",
-            "Deleting file: C:\\WindOS\\System256\\hal.dll",
+            "Deleting file: C:\\WindOS\\System256\\rickbyte.dev",
+            "Deleting file: C:\\WindOS\\System256\\never-gonna-give-you-up.dll",
+            "Deleting file: C:\\WindOS\\System256\\hal-uwp.dll",
             "[Error] Process is currently in use.",
             "[Warning] Critical system files detected. Attempting forced deletion...",
             "[Fatal Error] WindOS is cooked by your choices lil bro.",
@@ -2466,8 +2458,11 @@ export function initWindOS()  {
             case "clock":
                 openWindow(clockWindow, 3);
                 break;
+            case "cCmd":
+                closeWindow(cmdWindow, 6);
+                break;
             case "cmd":
-                return "cmd with ID [6] is already running";
+                return "cmd with PID [6] is already running";
             default:
                 return "Application not found";
         }
@@ -2480,7 +2475,7 @@ export function initWindOS()  {
             return shutDownCmd();
         }
 
-        if (fullInput === "del /f /s /q *.*" || fullInput === "sudo rm -rf /") {
+        if (fullInput === "del /f /s /q *.*") {
             return wipeSystem();
         }
 
