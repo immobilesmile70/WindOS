@@ -2409,20 +2409,20 @@ export function initWindOS()  {
 
     function wipeSystem() {
         const messages = [
-            "Deleting file: C:\\WindOS\\System32\\config\\SAM",
-            "Deleting file: C:\\WindOS\\System32\\drivers\\ntfs.sys",
-            "Deleting file: C:\\WindOS\\System32\\kernel32.dll",
-            "Deleting file: C:\\WindOS\\System32\\explorer.exe",
-            "Deleting file: C:\\WindOS\\System32\\cmd.exe",
-            "Deleting file: C:\\WindOS\\System32\\paint.exe",
-            "Deleting file: C:\\WindOS\\System32\\calc.exe",
-            "Deleting file: C:\\WindOS\\System32\\winception.exe",
-            "Deleting file: C:\\WindOS\\System32\\google.exe",
-            "Deleting file: C:\\WindOS\\System32\\notepad.exe",
-            "Deleting file: C:\\WindOS\\System32\\clock.exe",
-            "Deleting file: C:\\WindOS\\System32\\easteregg.exe",
-            "Deleting file: C:\\WindOS\\System32\\rickroll.dll",
-            "Deleting file: C:\\WindOS\\System32\\hal.dll",
+            "Deleting file: C:\\WindOS\\System256\\config\\SAM",
+            "Deleting file: C:\\WindOS\\System256\\drivers\\ntfs.sys",
+            "Deleting file: C:\\WindOS\\System256\\kernel32.dll",
+            "Deleting file: C:\\WindOS\\System256\\explorer.exe",
+            "Deleting file: C:\\WindOS\\System256\\cmd.exe",
+            "Deleting file: C:\\WindOS\\System256\\paint.exe",
+            "Deleting file: C:\\WindOS\\System256\\calc.exe",
+            "Deleting file: C:\\WindOS\\System256\\winception.exe",
+            "Deleting file: C:\\WindOS\\System256\\google.exe",
+            "Deleting file: C:\\WindOS\\System256\\notepad.exe",
+            "Deleting file: C:\\WindOS\\System256\\clock.exe",
+            "Deleting file: C:\\WindOS\\System256\\easteregg.exe",
+            "Deleting file: C:\\WindOS\\System256\\rickroll.dll",
+            "Deleting file: C:\\WindOS\\System256\\hal.dll",
             "[Error] Process is currently in use.",
             "[Warning] Critical system files detected. Attempting forced deletion...",
             "[Fatal Error] WindOS is cooked by your choices lil bro.",
@@ -2501,7 +2501,7 @@ export function initWindOS()  {
 
         const staticText = document.createElement("span");
         staticText.classList.add("static-text");
-        staticText.textContent = "C:\\WindOS\\System32>";
+        staticText.textContent = "C:\\WindOS\\System256>";
 
         const inputField = document.createElement("input");
         inputField.type = "text";
