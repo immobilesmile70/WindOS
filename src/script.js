@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function initWindOS() {
+    // No way I'm writing comments for every element :~/
     const bootingScreen = document.getElementById("booting-up_screen");
     const lockScreen = document.getElementById("lock_screen");
     const background = document.getElementById("BG");
@@ -2808,4 +2809,6 @@ document.addEventListener("DOMContentLoaded", () => {
         clickSound.play();
         cmdDIcon.classList.remove('active');
     });
-});
+}
+
+window.addEventListener("DOMContentLoaded", initWindOS);
