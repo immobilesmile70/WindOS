@@ -1288,6 +1288,10 @@ export function initWindOS() {
         function makeWindOSResizable() {
             if (windowEl.classList.contains("no-resize")) return;
 
+            let prevX, prevY, prevWidth, prevHeight, prevLeft, prevTop;
+            let resizeTimeout;
+            let isTouchDragging = false;
+
             const resizers = ["top-left", "top-right", "bottom-left", "bottom-right", "top", "bottom", "left", "right"];
 
             resizers.forEach(pos => {
